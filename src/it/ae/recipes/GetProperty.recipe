@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Recipe name="GetProperty">
+	<Extern class="com.ganteater.ae.desktop.processor.ATG2">
+		<Var name="APP" type="map">
+			<item key="protocol">http://</item> 
+			<item key="host">localhost</item> 
+			<item key="port">8080</item> 
+			<item key="username">admin</item> 
+			<item key="password">admin123</item> 
+		</Var> 
+		<GetProperty name="prop" component="/atg/registry/RepositoryTargeters/landingPageTargeters/SiteWideBannerTargeter" property="displayRuleStrings" connection="APP" /> 
+		<Out name="prop" /> 
+	</Extern> 
+</Recipe> 

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Recipe name="AddRepositoryItem">
+	<Extern class="com.ganteater.ae.desktop.processor.ATG2">
+		<Var name="APP" type="map">
+			<item key="protocol">http://</item> 
+			<item key="host">localhost</item> 
+			<item key="port">8080</item> 
+			<item key="username">admin</item> 
+			<item key="password">admin123</item> 
+		</Var> 
+		<Load name="data" file="media-data.html" /> 
+		<Var name="data" value="&lt;![CDATA[$var{data}]]&gt;" /> 
+		<ModifyItem name="item-data" connection="APP" repository="/atg/commerce/catalog/ProductCatalog" item-descriptor="media-internal-text">
+			<add-item item-descriptor="media-internal-text" id="m3260001">
+				<set-property name="parentFolder">fld330010</set-property> 
+				<set-property name="length">149</set-property> 
+				<set-property name="data">$var{data}</set-property> 
+				<set-property name="lastModified">1/21/2014 14:30:20</set-property> 
+				<set-property name="creationDate">7/22/2013 16:44:31</set-property> 
+				<set-property name="path">/Category/Cat_Fwear_Top_2014Shoes_NA_es</set-property> 
+				<set-property name="type">internal-text</set-property> 
+				<set-property name="name">Cat_Fwear_Top_2014Shoes_NA_es</set-property> 
+			</add-item> 
+		</ModifyItem> 
+		<Out name="item-data" /> 
+	</Extern> 
+</Recipe> 

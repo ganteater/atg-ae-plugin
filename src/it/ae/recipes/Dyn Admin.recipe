@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Recipe name="Dyn Admin">
+	<Extern class="com.ganteater.ae.desktop.processor.ATG2">
+		<GetProperty name="prop" component="atg/common/util/SystemRepositoryUtils" property="hashAlgorithm" connection="APP" /> 
+		<Out name="prop" /> 
+		<CheckValue actual="$var{prop}" expected="HmacMD5" onErrorMsg="Incorrect value." /> 
+		<Var name="test_value" value="false1" /> 
+		<SetProperty name="expert" connection="APP" component="/atg/modules/Commerce" property="expert" value="$var{test_value}" /> 
+		<GetProperty name="expert" component="/atg/modules/Commerce" property="expert" connection="APP" /> 
+		<Out name="expert" /> 
+		<CheckValue actual="$var{expert}" expected="$var{test_value}" onErrorMsg="Set property dosn't work." /> 
+	</Extern> 
+</Recipe> 

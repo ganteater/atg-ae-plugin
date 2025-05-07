@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Recipe name="Hermes Configuration">
+	<Extern class="ATG">
+		<AddItem name="result" connection="APP" repository="/com/crc/common/store/StoreRepository">
+			<add-item item-descriptor="shippingMethod" id="6100009">
+				<set-property name="description">Pick up your parcel(s) from a local collection point at a time that suits you. Estimated delivery: 2-3 working days.</set-property> 
+				<set-property name="isCollectionService">true</set-property> 
+				<set-property name="nameDefault">Collect+</set-property> 
+				<set-property name="collectionProvider">collectPlus</set-property> 
+				<set-property name="rank">179</set-property> 
+			</add-item> 
+		</AddItem> 
+		<Out name="result" /> 
+	</Extern> 
+</Recipe> 

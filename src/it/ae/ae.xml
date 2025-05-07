@@ -1,0 +1,24 @@
+<Environment xmlns="http://ganteater.com/xml/ae/configuration"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ganteater.com/xml/ae/configuration http://ganteater.com/xml/ae/configuration/anteater_1_2_1_6.xsd">
+
+	<Configuration name="Dev Environment">
+		<Var name="log_file" value="logfile" />
+		<Logger rootLogger="DEBUG,LOGFILE,CONSOLE"
+			Threshold="$var{system::log_level,DEBUG}"
+			ConversionPattern="%d{dd.MM.yyyy HH:mm:ss} %-6p %m %n"
+			File="$var{HOME_WORKINGDIR}/logs/$var{log_file}_$var{START_TIME}.log" />
+
+		<Var name="RECIPES_PATH" value="recipes" />
+		<Var name="port" value="28080" />
+
+		<Var name="APP" type="map">
+			<item key="protocol">http://</item>
+			<item key="host">localhost</item>
+			<item key="port">8080</item>
+			<item key="username">admin</item>
+			<item key="password">admin123</item>
+		</Var>
+	</Configuration>
+
+</Environments>

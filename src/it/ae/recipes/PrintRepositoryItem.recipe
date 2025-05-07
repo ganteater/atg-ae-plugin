@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Recipe name="PrintRepositoryItem">
+	<Extern class="com.ganteater.ae.desktop.processor.ATG2">
+		<Var name="APP" type="map">
+			<item key="protocol">http://</item> 
+			<item key="host">localhost</item> 
+			<item key="port">8080</item> 
+			<item key="username">admin</item> 
+			<item key="password">admin123</item> 
+		</Var> 
+		<PrintItem name="item-data" connection="APP" repository="/atg/commerce/catalog/ProductCatalog" item-descriptor="media-internal-text" id="m3260001" /> 
+		<Out name="item-data" type="xml" /> 
+	</Extern> 
+</Recipe> 
