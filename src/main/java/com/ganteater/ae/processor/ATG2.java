@@ -16,20 +16,20 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.ganteater.ae.AELogRecord;
-import com.ganteater.ae.processor.TaskProcessor;
+import com.ganteater.ae.processor.Processor;
 import com.ganteater.ae.processor.annotation.CommandExamples;
 import com.ganteater.ae.util.TestCase;
 import com.ganteater.ae.util.xml.easyparser.EasyUtils;
 import com.ganteater.ae.util.xml.easyparser.Node;
 
-public class ATG2 extends TaskProcessor {
+public class ATG2 extends BaseProcessor {
 
 	private static final int DEFAULT_TIMEOUT = 5000;
 	private static final String FILE_PREFIX = " File ";
 	private static final String DYN_ADMIN_ROOT = "/dyn/admin/nucleus/";
 	private static final String DEFAULT_PROTOCOL = "http://";
 
-	public ATG2(TaskProcessor aParent) {
+	public ATG2(Processor aParent) {
 		super(aParent);
 	}
 

@@ -14,17 +14,17 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import com.ganteater.ae.AELogRecord;
-import com.ganteater.ae.processor.TaskProcessor;
+import com.ganteater.ae.processor.Processor;
 import com.ganteater.ae.processor.annotation.CommandExamples;
 import com.ganteater.ae.util.xml.easyparser.Node;
 
-public class ATG extends TaskProcessor {
+public class ATG extends BaseProcessor {
 
 	private static final String FILE_PREFIX = " File ";
 	private static final String DYN_ADMIN_ROOT = "/dyn/admin/nucleus/";
 	private static final String DEFAULT_PROTOCOL = "http://";
 
-	public ATG(TaskProcessor aParent) {
+	public ATG(Processor aParent) {
 		super(aParent);
 	}
 
