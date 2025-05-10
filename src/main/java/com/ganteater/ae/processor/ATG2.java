@@ -16,7 +16,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.ganteater.ae.AELogRecord;
-import com.ganteater.ae.processor.Processor;
 import com.ganteater.ae.processor.annotation.CommandExamples;
 import com.ganteater.ae.util.TestCase;
 import com.ganteater.ae.util.xml.easyparser.EasyUtils;
@@ -28,10 +27,6 @@ public class ATG2 extends BaseProcessor {
 	private static final String FILE_PREFIX = " File ";
 	private static final String DYN_ADMIN_ROOT = "/dyn/admin/nucleus/";
 	private static final String DEFAULT_PROTOCOL = "http://";
-
-	public ATG2(Processor aParent) {
-		super(aParent);
-	}
 
 	@CommandExamples({
 			"<SetProperty connection='type:property' component='type:string' property='type:string' value='type:string'/>" })
