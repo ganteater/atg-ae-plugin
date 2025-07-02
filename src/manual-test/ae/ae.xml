@@ -20,5 +20,4 @@
 			<item key="password">admin123</item>
 		</Var>
 	</Configuration>
-
-</Environments>
+</Environment>
