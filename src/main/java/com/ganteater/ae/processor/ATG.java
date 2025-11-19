@@ -163,8 +163,8 @@ public class ATG extends BaseProcessor {
 		debug(new AELogRecord(url, "url", "url"));
 		Connection connect = Jsoup.connect(url);
 
-		String timeout = attr(action, "timeout");
-		connect.timeout(Integer.parseInt(StringUtils.defaultIfEmpty(timeout, "5000")));
+		int timeout = (int) parseTime(action, "timeout", "5000");
+		connect.timeout(timeout);
 
 		String username = attr(action, "username");
 		if (username != null) {
